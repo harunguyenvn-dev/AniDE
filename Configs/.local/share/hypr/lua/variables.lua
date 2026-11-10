@@ -7,7 +7,10 @@ local systemd_env = {
     "XDG_DATA_HOME",
     "XDG_CACHE_HOME",
     "XDG_STATE_HOME",
-    "QT_QPA_PLATFORMTHEME"
+    "QT_QPA_PLATFORMTHEME",
+    "GTK_IM_MODULE",
+    "QT_IM_MODULE",
+    "XMODIFIERS"
 }
 local systemd_env_str = table.concat(systemd_env, " ")
 
@@ -31,6 +34,32 @@ hyde.env("XDG_CACHE_HOME", os.getenv("XDG_CACHE_HOME") or ((os.getenv("HOME") or
 hyde.env("XDG_DATA_HOME", os.getenv("XDG_DATA_HOME") or ((os.getenv("HOME") or "") .. "/.local/share"))
 hyde.env("XDG_STATE_HOME", os.getenv("XDG_STATE_HOME") or ((os.getenv("HOME") or "") .. "/.local/state"))
 hyde.env("PATH", os.getenv("PATH") or "")
+
+-- Default to IBus only when no other input method was selected. The UWSM
+-- environment applies the same policy before Hyprland starts.
+local input_method = os.getenv("ANIDE_INPUT_METHOD") or "auto"
+local gtk_im, qt_im, xim = os.getenv("GTK_IM_MODULE"), os.getenv("QT_IM_MODULE"), os.getenv("XMODIFIERS")
+local function compatible(value, expected)
+    return value == nil or value == "" or value == expected
+end
+-- Do not point applications at an input method that is not installed. Avoid
+-- spawning a subprocess while Hyprland evaluates its configuration.
+local function has_ibus()
+    for dir in (os.getenv("PATH") or ""):gmatch("[^:]+") do
+        local file = io.open(dir .. "/ibus-daemon", "r")
+        if file then
+            file:close()
+            return true
+        end
+    end
+    return false
+end
+if (input_method == "auto" or input_method == "ibus") and has_ibus()
+    and compatible(gtk_im, "ibus") and compatible(qt_im, "ibus") and compatible(xim, "@im=ibus") then
+    hyde.env("GTK_IM_MODULE", "ibus")
+    hyde.env("QT_IM_MODULE", "ibus")
+    hyde.env("XMODIFIERS", "@im=ibus")
+end
 
 local hc = hyde.config
 
@@ -63,6 +92,7 @@ hc.start.applet_removable_media =
     unt .. "-removable-media-applet.service -t " .. svc .. " -- udiskie --no-automount --smart-tray"
 hc.start.applet_bluetooth =
     "hyde-shell app -u " .. unt .. "-bluetooth-applet.service -t " .. svc .. " -- blueman-applet"
+hc.start.input_method = "hyde-shell ibus-start"
 hc.start.hyde_config = "hyde-shell app -u " .. unt .. "-config-watcher.service -t " .. svc .. " -- config.lua"
 
 -- Themes (assign to hyde.config.ui)

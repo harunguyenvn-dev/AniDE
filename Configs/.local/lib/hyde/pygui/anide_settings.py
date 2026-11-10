@@ -32,6 +32,7 @@ SECTIONS = (
     )),
     ("System", "⚙", "Your desktop essentials", (
         ("Lock screen", "Choose an existing Hyprlock preset.", ("hyde-shell", "lockscreen", "--select"), ("hyde-shell", "rofi")),
+        ("Vietnamese input", "Configure IBus and add the Unikey input method.", ("ibus-setup",), ("ibus-setup",)),
         ("Audio", "Open the system audio mixer.", ("pavucontrol",), ("pavucontrol",)),
         ("Network", "Open NetworkManager connection settings.", ("nm-connection-editor",), ("nm-connection-editor",)),
         ("Bluetooth", "Open Bluetooth Manager.", ("blueman-manager",), ("blueman-manager",)),

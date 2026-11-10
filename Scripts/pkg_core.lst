@@ -16,6 +16,8 @@ bluez-utils                                            # bluetooth utility cli
 blueman                                                # bluetooth manager gui
 brightnessctl                                          # screen brightness control
 playerctl                                              # media controls
+ibus                                                  # input method framework
+ibus-unikey                                           # Vietnamese input engine
 udiskie                                                # manage removable media
 
 # --------------------------------------------------- // Display Manager
