@@ -21,7 +21,7 @@
   },
   "group/pill#system": {
     "orientation": "inherit",
-    "modules": ["custom/anide-theme", "custom/anide-wallpaper", "custom/anide-keybinds", "privacy", "tray", "network", "pulseaudio", "battery"]
+    "modules": ["custom/anide-theme", "custom/anide-wallpaper", "custom/anide-keybinds", "custom/anide-settings", "privacy", "tray", "network", "pulseaudio", "battery"]
   },
 
   "custom/anide-launcher": {
@@ -43,6 +43,11 @@
     "format": "",
     "tooltip-format": "Phím tắt",
     "on-click": "hyde-shell keybinds_hint"
+  },
+  "custom/anide-settings": {
+    "format": "⚙",
+    "tooltip-format": "AniDE Settings",
+    "on-click": "hyde-shell anide-settings"
   },
   "mpris": {
     "format": "{player_icon} {dynamic}",

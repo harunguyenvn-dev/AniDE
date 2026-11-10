@@ -95,6 +95,13 @@ paths = [
     "gtk-3.0/settings.ini",
 ]
 
+# Install only this launcher, not the user's whole applications directory.
+[[hyde.files]]
+action = "sync"
+source_root = "Configs/.local/share/applications"
+target_root = "${XDG_DATA_HOME}/applications"
+paths = ["anide-settings.desktop"]
+
 [[hyde.files]]
 action = "sync"
 source_root = "Configs/.local/bin"
