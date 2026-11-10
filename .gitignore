@@ -23,3 +23,7 @@ build
 
 # graphify knowledge-graph cache (local, machine-specific, regenerable via /graphify)
 graphify-out/
+# Ship this managed UWSM input-method snippet, but keep local additions ignored.
+!Configs/.config/uwsm/env-hyprland.d/
+Configs/.config/uwsm/env-hyprland.d/*
+!Configs/.config/uwsm/env-hyprland.d/10-anide-input.sh

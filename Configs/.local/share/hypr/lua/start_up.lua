@@ -17,6 +17,7 @@ hl.on(
 		check_exec(hs.blue_light_filter_daemon)
 		check_exec(hs.notifications)
 		check_exec(hs.auth_dialogue)
+		check_exec(hs.input_method)
 		check_exec("hyprctl setcursor " .. hyde.config.ui.cursor_theme .. " " .. hyde.config.ui.cursor_size)
 		check_exec(hs.text_clipboard)
 		check_exec(hs.image_clipboard)

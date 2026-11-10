@@ -22,6 +22,7 @@ pacman = [
   "blueman", # bluetooth manager gui
   "brightnessctl", # screen brightness control
   "playerctl", # media controls
+  "ibus", # input method framework
   "udiskie", # manage removable media
   # Display Manager
   "sddm", # display manager for KDE plasma
@@ -81,10 +82,12 @@ yay = [
   # theme.switch.sh can't tell the user why (#2098).
   "hyprquery", # A CLI utility for querying configuration values from hypr-related configuration. Using native hyprlang lib.
   "wlogout", # logout menu
+  "ibus-unikey", # Vietnamese input engine (repo or AUR via helper)
 
 ]
 paru = [
   "hyprquery", # A CLI utility for querying configuration values from hypr-related configuration. Using native hyprlang lib.
   "wlogout", # logout menu
+  "ibus-unikey", # Vietnamese input engine (repo or AUR via helper)
 
 ]

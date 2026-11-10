@@ -63,6 +63,13 @@ Check this out for the full note:
 
 <br>
 
+### Vietnamese input
+
+AniDE includes IBus and the Unikey Vietnamese engine in its Arch installation.
+After logging in, add **Vietnamese → Unikey** in `ibus-setup` (also available
+in AniDE Settings). See [IBus Unikey](docs/IBUS-UNIKEY.md) for setup, opt-out,
+and troubleshooting.
+
 ### AniDE Settings
 
 Open **AniDE Settings** from your application launcher, or run `hyde-shell anide-settings`.
