@@ -20,6 +20,11 @@ All packages installed via the package manager were referenced in the following 
 
 ## Inspirations
 
+- [HyDE-Project/HyDE](https://github.com/HyDE-Project/HyDE) — nền tảng cấu hình, Wallbash và hệ sinh thái theme mà AniDE kế thừa.
+- [Blapples/SekaiPop](https://github.com/Blapples/SekaiPop) — tham khảo kiến trúc Quickshell, plugin và installer cho RFC AniDE v2 (GPL-3.0).
+- [end-4/dots-hyprland](https://github.com/end-4/dots-hyprland) — tham khảo kiến trúc Quickshell, Lua và công cụ chẩn đoán cho RFC AniDE v2 (GPL-3.0).
+
+
 - The HyDE Project is a superset of hyprdots. This is a continued effort to make hyprdots customizable and extensible. Thanks @prasanthrangan / @Tittu - [hyprdots](https://github.com/prasanthrangan/hyprdots)
 - Derived hyprlock Ideas - [MrVivekRajan/Hypr-Dots](https://github.com/MrVivekRajan/Hypr-Dots)
 
