@@ -63,6 +63,14 @@ Check this out for the full note:
 
 <br>
 
+### AniDE Settings
+
+Open **AniDE Settings** from your application launcher, or run `hyde-shell anide-settings`.
+This optional Qt 6 settings hub uses your existing desktop selectors and tools;
+it does not require Quickshell. It needs system Python with PyQt6 (on Arch:
+`sudo pacman -S python-pyqt6`). See [AniDE Settings](docs/ANIDE-SETTINGS.md)
+for dependencies, supported actions, and limitations.
+
 <a id="installation"></a>
 <img src="https://readme-typing-svg.herokuapp.com?font=Lexend+Giga&size=25&pause=1000&color=CCA9DD&vCenter=true&width=435&height=25&lines=INSTALLATION" width="450"/>
 
