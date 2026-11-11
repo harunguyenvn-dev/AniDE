@@ -383,6 +383,88 @@
                             "type": "string"
                         }
                     }
+                },
+                "movie": {
+                    "description": "hyde-shell rofi.movie.sh (KKPhim) configuration.",
+                    "type": "object",
+                    "properties": {
+                        "player": {
+                            "default": "",
+                            "description": "Video player command (empty = auto-detect mpv, vlc, celluloid, haruna).",
+                            "type": "string"
+                        },
+                        "style": {
+                            "default": "clipboard",
+                            "description": "Rofi theme name for the movie menus.",
+                            "type": "string"
+                        },
+                        "scale": {
+                            "default": 10,
+                            "description": "Scaling for the movie menus.",
+                            "type": "integer"
+                        },
+                        "font": {
+                            "default": "JetBrainsMono Nerd Font",
+                            "description": "Font for the movie menus.",
+                            "type": "string"
+                        },
+                        "width": {
+                            "default": "46em",
+                            "description": "Window width of the movie menus.",
+                            "type": "string"
+                        },
+                        "server_pref": {
+                            "default": "auto",
+                            "description": "Preferred audio track when a movie has several servers.",
+                            "options": [
+                                "auto",
+                                "vietsub",
+                                "long-tieng",
+                                "thuyet-minh"
+                            ],
+                            "type": "string"
+                        },
+                        "poster": {
+                            "default": true,
+                            "description": "Show poster icons in the movie lists.",
+                            "type": "boolean"
+                        },
+                        "limit": {
+                            "default": 24,
+                            "description": "Results per page, 1-64.",
+                            "options": [
+                                8,
+                                12,
+                                16,
+                                20,
+                                24,
+                                32,
+                                48,
+                                64
+                            ],
+                            "type": "integer"
+                        },
+                        "detail_ttl": {
+                            "default": 600,
+                            "description": "Seconds a cached movie detail stays valid.",
+                            "type": "integer"
+                        },
+                        "site_url": {
+                            "default": "https://kkphim.com",
+                            "description": "KKPhim site used for Referer headers and browser links.",
+                            "type": "string"
+                        },
+                        "api_url": {
+                            "default": "https://phimapi.com",
+                            "description": "PhimAPI endpoint used for search and listings.",
+                            "type": "string"
+                        },
+                        "cdn_url": {
+                            "default": "https://phimimg.com",
+                            "description": "Image CDN used for poster URLs.",
+                            "type": "string"
+                        }
+                    }
                 }
             }
         },
@@ -897,6 +979,11 @@
                     "items": {
                         "type": "string"
                     }
+                },
+                "terminal": {
+                    "default": "",
+                    "description": "Terminal used to launch a console monitor. Falls back to TERMINAL.",
+                    "type": "string"
                 }
             }
         },

@@ -160,6 +160,7 @@ Holding <kbd>ALT</kbd> keeps the switcher open; releasing it applies the selecti
 | <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>A</kbd>     | select rofi launcher |
 | <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>K</kbd>     | calculator           |
 | <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>slash</kbd> | web search           |
+| <kbd>SUPER</kbd> + <kbd>SHIFT</kbd> + <kbd>M</kbd>     | movies (KKPhim)      |
 
 <!-- ## <a id="hardware-controls">Hardware Controls</a> -->
 

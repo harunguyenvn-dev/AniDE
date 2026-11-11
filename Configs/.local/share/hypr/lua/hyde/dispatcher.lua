@@ -164,6 +164,7 @@ hyde.command_map = {
 [ "menu.select" ] = "rofiselect",
 [ "menu.calculator" ] = "calculator",
 [ "menu.search" ] = "rofi.websearch",
+[ "menu.movie" ] = "rofi.movie",
 [ "kb.switch" ] = "keyboardswitch",
 [ "colorpicker" ] = "hyprpicker -an",
 [ "screenshot.full"] = "screenshot p",
