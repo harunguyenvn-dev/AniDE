@@ -93,6 +93,21 @@ args = []  # Additional arguments for bookmarks.
 scale = 10  # Scaling for bookmarks.
 font = "JetBrainsMono Nerd Font"  # Font for bookmarks.
 
+# hyde-shell rofi.movie.sh (KKPhim) configuration.
+[rofi.movie]
+player = ""  # Video player command (empty = auto-detect mpv, vlc, celluloid, haruna).
+style = "clipboard"  # Rofi theme name for the movie menus.
+scale = 10  # Scaling for the movie menus.
+font = "JetBrainsMono Nerd Font"  # Font for the movie menus.
+width = "46em"  # Window width of the movie menus.
+server_pref = "auto"  # Preferred audio track when a movie has several servers.
+poster = true  # Show poster icons in the movie lists.
+limit = 24  # Results per page, 1-64.
+detail_ttl = 600  # Seconds a cached movie detail stays valid.
+site_url = "https://kkphim.com"  # KKPhim site used for Referer headers and browser links.
+api_url = "https://phimapi.com"  # PhimAPI endpoint used for search and listings.
+cdn_url = "https://phimimg.com"  # Image CDN used for poster URLs.
+
 
 # wlogout configuration.
 [wlogout]
@@ -153,7 +168,7 @@ skip_template = [""]  # Templates to skip when using wallbash.
 font = "JetBrainsMono Nerd Font"  # Font for waybar.
 scale = 10  # Total scaling for waybar.
 icon_size = 10  # Icon size for waybar.
-position = "top"  # A fallback position of the waybar.
+position = "top"  # A fallback position of the waybar.  
 
 # Weather configuration.
 [weather]
@@ -331,3 +346,4 @@ prefix_paused = "  "  # Prefix for paused media.
 max_length = 70  # Max length of song and artist string.
 standby_text = "  Music"  # To display on standby.
 artist_track_separator = "  "  # Separator symbols to display between artist and track.
+

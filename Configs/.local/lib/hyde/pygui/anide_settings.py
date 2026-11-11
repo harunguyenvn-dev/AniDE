@@ -30,6 +30,11 @@ SECTIONS = (
         ("Shaders", "Choose a screen shader, or disable it in the selector.", ("hyde-shell", "shaders", "--select"), ("hyde-shell", "rofi")),
         ("Night light", "Toggle the existing Hyprsunset night-light control.", ("hyde-shell", "hyprsunset", "--toggle"), ("hyde-shell", "hyprctl")),
     )),
+    ("Media", "▶", "Watch something tonight", (
+        ("Movies (KKPhim)", "Search, browse and play movies from KKPhim without leaving Rofi.", ("hyde-shell", "rofi.movie"), ("hyde-shell", "rofi", "mpv", "curl", "jq")),
+        ("Movie history", "Continue a movie you watched before, or clear the local history.", ("hyde-shell", "rofi.movie", "history"), ("hyde-shell", "rofi", "mpv")),
+        ("Movie settings", "Pick the player, Rofi style, subtitle preference and cache options.", ("hyde-shell", "rofi.movie", "settings"), ("hyde-shell", "rofi")),
+    )),
     ("System", "⚙", "Your desktop essentials", (
         ("Lock screen", "Choose an existing Hyprlock preset.", ("hyde-shell", "lockscreen", "--select"), ("hyde-shell", "rofi")),
         ("Vietnamese input", "Configure IBus and add the Unikey input method.", ("ibus-setup",), ("ibus-setup",)),

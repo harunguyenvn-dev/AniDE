@@ -70,6 +70,16 @@ After logging in, add **Vietnamese → Unikey** in `ibus-setup` (also available
 in AniDE Settings). See [IBus Unikey](docs/IBUS-UNIKEY.md) for setup, opt-out,
 and troubleshooting.
 
+### Movies on Rofi
+
+AniDE brings the movie browser from [anisub](https://github.com/niyakipham/anisub)
+into Rofi: search, browse categories, pick a server and an episode, and play from
+KKPhim. Press **SUPER + SHIFT + M** or run `hyde-shell rofi.movie`. Playback
+uses `mpv` (or `vlc`, `celluloid`, `haruna`) and passes the KKPhim referer
+headers the HLS servers require. `mpv` and `curl` are part of the default
+package list; a missing player only means the link opens in your browser. See
+[Movies on Rofi](docs/ANIDE-MOVIE.md) for commands, settings and limitations.
+
 ### AniDE Settings
 
 Open **AniDE Settings** from your application launcher, or run `hyde-shell anide-settings`.

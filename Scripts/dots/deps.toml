@@ -45,6 +45,7 @@ pacman = [
   "pacman-contrib", # for system update check
   "parallel", # for parallel processing
   "jq", # for json processing
+  "curl", # HTTP client for hyde-shell rofi.movie
   "imagemagick", # for image processing
   "qt5-imageformats", # for dolphin image thumbnails
   "ffmpegthumbs", # for dolphin video thumbnails
@@ -68,6 +69,7 @@ pacman = [
   # * "code", # ide text editor
   "nwg-displays", # monitor management utility
   "fzf", # Command-line fuzzy finder
+  "mpv", # video player for hyde-shell rofi.movie
   # HyDE
 
 ]

@@ -330,6 +330,25 @@ rofilaunch.sh configuration.
 | window_args | Additional arguments for window mode. | [] |
 | window_style | Style for window mode. | style_1 |
 
+### [rofi.movie]
+
+hyde-shell rofi.movie.sh (KKPhim) configuration.
+
+| Key | Description | Default |
+| --- | ----------- | ------- |
+| api_url | PhimAPI endpoint used for search and listings. | https://phimapi.com |
+| cdn_url | Image CDN used for poster URLs. | https://phimimg.com |
+| detail_ttl | Seconds a cached movie detail stays valid. | 600 |
+| font | Font for the movie menus. | JetBrainsMono Nerd Font |
+| limit | Results per page, 1-64. | 24 |
+| player | Video player command (empty = auto-detect mpv, vlc, celluloid, haruna). |  |
+| poster | Show poster icons in the movie lists. | true |
+| scale | Scaling for the movie menus. | 10 |
+| server_pref | Preferred audio track when a movie has several servers. | auto |
+| site_url | KKPhim site used for Referer headers and browser links. | https://kkphim.com |
+| style | Rofi theme name for the movie menus. | clipboard |
+| width | Window width of the movie menus. | 46em |
+
 ### [rofi.theme]
 
 themeselect.sh configuration.
@@ -397,6 +416,7 @@ sysmonlaunch.sh configuration.
 | --- | ----------- | ------- |
 | commands | Fallback command options. | [""] |
 | execute | Default command to execute. |  |
+| terminal | Terminal used to launch a console monitor. Falls back to TERMINAL. |  |
 
 ### [volume]
 
@@ -489,3 +509,4 @@ wlogout configuration.
 | Key | Description | Default |
 | --- | ----------- | ------- |
 | style | Style for wlogout. | 2 |
+
